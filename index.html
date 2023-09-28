@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by ieelon</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MAXIM HACK</title>
+  <style>
+    body {
+      background-image: url(https://i.pinimg.com/originals/b3/88/73/b3887341545790ed89de017c17127939.gif);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff0000;
+      color: white;
+      font-size: 20px;
+      border-radius: 5px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    frame {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+    }
+
+    .frame-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: red;
+      padding: 20px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="button" onclick="showFrame();">OPEN</button>
+  <div class="frame" id="frame">
+    <div class="frame-content">
+      <p id="text"></p>
+      <button onclick="hideFrame();">CLOSE</button>
+    </div>
+  </div>
+
+  <script>
+    function showFrame() {
+      document.getElementById('frame').style.display = 'block';
+    }
+
+    function hideFrame() {
+      document.getElementById('frame').style.display = 'none';
+    }
+    // Добавленный код
+    window.onload = function() {
+      document.getElementById('frame').style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
